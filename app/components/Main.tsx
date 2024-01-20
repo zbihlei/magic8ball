@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/main.module.scss';
 import useRandomAnswer from '../hooks/useRandom';
+import useShakeDetection from '../hooks/useShakeDetection';
 
 function Main() {
   const [clicked, setClicked] = useState(false);
@@ -10,7 +11,7 @@ function Main() {
   const [text, setShowText] = useState(false);
   const [answer, setAnswer] = useState('');
   const getRandomAnswer = useRandomAnswer();
- 
+
   useEffect(()=>{
     setAnswer(getRandomAnswer());
   },[text]);
@@ -25,6 +26,8 @@ function Main() {
       }, 800);
   },1000)
   };
+
+  useShakeDetection(handleToggleClass, { threshold: 15 });
 
   const handleResetStyles = () => {
     setIsLogoShifted(false);
