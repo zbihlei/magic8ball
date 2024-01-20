@@ -53,7 +53,7 @@ function Main() {
       </div>
     </div>
     {clicked ? 
-    <button onClick={handleResetStyles} className={styles.shake}>Again</button> 
+    <button onClick={handleResetStyles} className={styles.shake} style={{color: 'white'}}>Again</button> 
     : 
     <button onClick={handleToggleClass} className={styles.shake} style={{color: 'white'}}>Shake</button>}
     <span className={styles.dev}>Developed by <Link href={'https://github.com/zbihlei'}>zbihlei</Link></span>
