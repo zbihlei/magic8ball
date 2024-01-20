@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import styles from '../styles/main.module.scss';
 import useRandomAnswer from '../hooks/useRandom';
 import useShakeDetection from '../hooks/useShakeDetection';
@@ -33,7 +34,7 @@ function Main() {
     setIsLogoShifted(false);
     setTriangleShifted(false);
     setClicked(false);
-    setTimeout(() => {
+    setTimeout(() => {``
       setShowText(false);
     }, 800);
   };
@@ -54,7 +55,8 @@ function Main() {
     {clicked ? 
     <button onClick={handleResetStyles} className={styles.shake}>Again</button> 
     : 
-    <button onClick={handleToggleClass} className={styles.shake}>Shake</button>}
+    <button onClick={handleToggleClass} className={styles.shake} style={{color: 'white'}}>Shake</button>}
+    <span className={styles.dev}>Developed by <Link href={'https://github.com/zbihlei'}>zbihlei</Link></span>
   </div>
   );
 }

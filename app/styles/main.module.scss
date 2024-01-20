@@ -135,7 +135,14 @@
   height: 50px;
   width: 200px;
   z-index: 999;
-
+}
+.dev{
+  position: absolute;
+  bottom: 10px;
+  color: wheat;
+  *{
+    color: rgb(26, 137, 223);
+  }
 }
 .stars, .twinkling {
   position:absolute;
@@ -209,7 +216,7 @@
     transition: opacity 1s ease-in-out;
   }
   .shake{
-    top: 40%;
+    top: 30%;
   }
 
 }
