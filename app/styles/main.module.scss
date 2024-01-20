@@ -1,0 +1,215 @@
+.wrapp{
+ display: flex;
+ flex-direction: column;
+ justify-content: bottom;
+ align-items: center;
+ padding-top: 50px;
+}
+.ball {
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  border: 7px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 99;
+  transition: transform 2s, opacity 1s ease-in-out;
+  overflow: hidden;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shakeAnimation {
+  animation: shake 1s;
+}
+
+.logo {
+  height: 250px;
+  width: 250px;
+  background-size: contain;
+  z-index: 9999;
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  transform: rotate(-40deg);
+  background-image: url('../images/8.png');
+  transition: transform 2s, opacity 1s ease-in-out;
+}
+.stroke {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  background-size: contain;
+  z-index: 9999;
+  position: absolute;
+  bottom: 750px;
+  left: 250px;
+  background-image: url('../images/stroke.png');
+  transition: transform 2s, opacity 1s ease-in-out;
+  overflow: hidden;
+}
+.triangle{
+  display: flex;
+  position: absolute;
+  top: 65px;
+  left: 55px;
+  height: 170px;
+  width: 170px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../images/tr1.png');
+}
+
+.text{
+  text-transform: uppercase;
+  padding-top: 40px;
+  margin: 0 auto;
+  font-size: 30px;
+  transform: rotateY(180deg); 
+  transition: opacity 1s ease-in-out;
+}
+.hide{
+  opacity: 0;
+}
+
+.logoShifted {
+  top: 100px;
+  left: -280px;
+  transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+}
+.logoShiftedBack {
+  top: 100px;
+  right: 300px;
+  transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+}
+.strokeShifted{
+  left: 370px;
+  bottom: -260px;
+  transform: rotate(45deg);
+  transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+}
+.strokeShiftedBack{
+  bottom: -260px;
+  left: 370px;
+  position: absolute;
+  transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+}
+.triangleShifted{
+  left: 43px;
+  transform: rotateY(180deg); 
+  transition: left 1s, transform 1.7s ease-in-out;
+}
+.triangleShiftedBack{
+  left: 43px;
+  transform: rotateY(0); 
+  transform: rotate(-35deg);
+  transition: left .7s, transform 1.3s ease-in-out;
+}
+
+.shake{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 550%);
+  border: 5px solid white;
+  border-radius: 30px;
+  background-color: inherit;
+  text-transform: uppercase;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  z-index: 999;
+
+}
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background-image: url(https://i.postimg.cc/CLpNr4PF/twinkling.png);
+  animation: 3s twinkle infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes twinkle {
+  from {backrgound-position: 0}
+  to {background-position: -100px 0}
+}
+
+
+@media (max-width: 768px){
+  .ball {
+    height: 350px;
+    width: 350px;
+  }
+  .logo {
+    height: 175px;
+    width: 175px;
+  }
+  .stroke{
+    height: 175px;
+    width: 175px;
+  }
+  .strokeShifted{
+    left: 320px;
+    bottom: -260px;
+    transform: rotate(45deg);
+    transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+  }
+  .strokeShiftedBack{
+    bottom: -260px;
+    left: 320px;
+    position: absolute;
+    transition: top 2s, left 2s, transform 2s, opacity 1s ease-in-out;
+  }
+  .triangle{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    height:110px;
+    width:110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/tr1.png');
+  }
+  .text{
+    text-transform: uppercase;
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 25px;
+    transform: rotateY(180deg); 
+    transition: opacity 1s ease-in-out;
+  }
+  .shake{
+    top: 40%;
+  }
+
+}
