@@ -58,6 +58,7 @@ function Main() {
         </div>
       </div>
     </div>
+    <span className={styles.info}>press space</span>
     {clicked ? 
     <button onClick={handleResetStyles} className={styles.shake} style={{color: 'white'}}>Again</button> 
     : 

@@ -144,6 +144,11 @@
     color: rgb(26, 137, 223);
   }
 }
+.info{
+  z-index: 999;
+  position: absolute;
+  bottom: 15%;
+}
 .stars, .twinkling {
   position:absolute;
   top:0;
@@ -217,6 +222,9 @@
   }
   .shake{
     top: 30%;
+  }
+  .info{
+    display: none;
   }
 
 }
